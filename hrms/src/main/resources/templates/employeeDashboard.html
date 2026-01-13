@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Employee Dashboard - Magadh University HRMS</title>
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="logo.png" alt="Magadh University" width="50" height="50" class="d-inline-block align-top">
+      Magadh University HRMS
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/employee/attendance}">Manage Attendance</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/employee/leaveRequest}">Request Leave</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/employee/submitLeaveRequest}">Submit Leave Request</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/employee/markAttendance}">Mark Attendance</a> <!-- New link -->
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<main>
+  <div class="container mt-5">
+    <h2 class="text-center">Employee Dashboard</h2>
+    <div class="card mt-4">
+      <div class="card-body text-center">
+        <h5 class="card-title">Manage Attendance</h5>
+        <p class="card-text">Mark and review your attendance.</p>
+        <a th:href="@{/employee/attendance}" class="btn btn-primary">Manage Attendance</a>
+      </div>
+    </div>
+    <div class="card mt-4">
+      <div class="card-body text-center">
+        <h5 class="card-title">Leave Requests</h5>
+        <p class="card-text">Request and submit leave requests.</p>
+        <a th:href="@{/employee/leaveRequest}" class="btn btn-primary">Request Leave</a>
+        <a th:href="@{/employee/submitLeaveRequest}" class="btn btn-primary">Submit Leave Request</a>
+      </div>
+    </div>
+    <div class="card mt-4">
+      <div class="card-body text-center">
+        <h5 class="card-title">Mark Attendance</h5>
+        <p class="card-text">Mark attendance for students.</p>
+        <a th:href="@{/employee/markAttendance}" class="btn btn-primary">Mark Attendance</a> <!-- New link -->
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
